@@ -2,6 +2,10 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def index():
+    return "hi"
+
 @app.route('/posts', methods=['POST'])
 def create_post():
     # Get data from the request
